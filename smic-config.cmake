@@ -2,7 +2,7 @@ set(CTEST_SITE "smic.lbl.gov")
 set(CTEST_BUILD_NAME "Fedora-23-gcc-5.3.1")
 set(CTEST_DASHBOARD_ROOT "/work/dashboards/teca")
 set(CTEST_MEMORYCHECK_COMMAND "/bin/valgrind")
-set(CTEST_MEMORYCHECK_COMMAND_OPTIONS "--leak-check=full --track-origins=yes --num-callers=500")
+set(CTEST_MEMORYCHECK_COMMAND_OPTIONS "--leak-check=full --track-origins=yes --num-callers=500 --suppressions=${CTEST_DASHBOARD_ROOT}/TECA_3rdparty/Python/Misc/valgrind-python.supp")
 set(INITIAL_CACHE
 "BUILD_TESTING=ON
 TECA_DATA_ROOT=${CTEST_DASHBOARD_ROOT}/TECA_data
